@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TETSUO X - Creative Director & Digital Designer Portfolio">
+    <title>YASH SINGH | Creative Devloper Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">YASH<span>SINGH</span></div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+        <div class="loader-percent"><span id="loaderPercent">0</span>%</div>
+    </div>
+
+    <!-- Page Transition -->
+    <div class="page-transition" id="pageTransition"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="navigateTo('home')">YASH<span>SINGH</span></div>
+        <div class="nav-menu">
+            <a href="#home" onclick="navigateTo('home')" class="active" data-page="home">Home</a>
+            <a href="#projects" onclick="scrollToSection('projects')">Project</a>
+            <a href="#services" onclick="scrollToSection('services')">Services</a>
+            <a href="#about" onclick="scrollToSection('about')">About</a>
+            <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="navigateTo('home'); closeMobileMenu();">Home</a>
+        <a href="#projects" onclick="scrollToSection('projects'); closeMobileMenu();">Project</a>
+        <a href="#services" onclick="scrollToSection('services'); closeMobileMenu();">Services</a>
+        <a href="#about" onclick="scrollToSection('about'); closeMobileMenu();">About</a>
+        <a href="#contact" onclick="scrollToSection('contact'); closeMobileMenu();">Contact</a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- ==================== HOME PAGE ==================== -->
+    <div class="page active" id="page-home">
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <div class="hero-orb hero-orb-1"></div>
+                <div class="hero-orb hero-orb-2"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-tag reveal">
+                    <span class="dot"></span>
+                    Available for Freelance
+                </div>
+
+                <h1 class="hero-title reveal reveal-delay-1">
+                    Digital<br>
+                    <span class="outline">Creative</span><br>
+                    <span class="text-accent">Devloper</span>
+                </h1>
+
+                <p class="hero-subtitle reveal reveal-delay-2">
+                    Crafting immersive digital experiences through bold design and strategic coding. BASED IN INDIA.
+                </p>
+
+                <div class="hero-cta reveal reveal-delay-3">
+                    <a href="#projects" onclick="scrollToSection('projects')" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="mailto:yashsinghonwork@gmail.com" onclick="scrollToSection('contact')"
+                        class="btn btn-outline">
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Interactive Ghost Container -->
+            <div class="ghost-wrapper" id="ghost">
+                <!-- UPDATED: Social Profile Bubble -->
+                <div class="ghost-speech-bubble" id="socialBubble">
+                    <div class="bubble-content">
+                        <div class="profile-row">
+                         
+                            <div class="profile-info">
+                                <span class="name">YASH SINGH</span>
+                                <span class="job">Creative Devloper</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <!-- Replace # with your links -->
+                            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://x.com/yashonfreetime" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/yashsingh.digital?igsh=MWkxd2ZmaHhyZGN0aw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/yashsinghonline"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ghost-body">
+                    <div class="ghost-face">
+                        <div class="ghost-eye left"><span class="pupil"></span></div>
+                        <div class="ghost-eye right"><span class="pupil"></span></div>
+                        <div class="ghost-blush left"></div>
+                        <div class="ghost-blush right"></div>
+                        <div class="ghost-mouth"></div>
+                    </div>
+                    <div class="ghost-hand left"></div>
+                    <div class="ghost-hand right"></div>
+                    <div class="ghost-ripple"></div>
+                </div>
+                <div class="ghost-shadow"></div>
+            </div>
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="THINK">THINK</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-number" data-target="PLAN">PLAN</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-number" data-target="DESIGN">DESIGN</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-number" data-target="BUILD">BUILD</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="section-tag">Selected Work</div>
+                    <h2 class="section-title">EXPLORE MORE OF MY WORK</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <a id="project1"class="project-card reveal" href="https://www.behance.net/gallery/242118453/GRAPHIC-DESIGN">
+                        <div class="project-image">
+                            <img src="image/gpt-image-1.5_a_Create_a_bold_urban_.png"
+                                alt="Project 1" loading="lazy">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <span class="project-number">01</span>
+                        <div class="project-content">
+                            <h3 class="project-title">GRAPHIC DESIGNING</h3>
+                            <p class="project-desc">Design that speaks loud, clear, and with purpose.</p>
+                        </div>
+                        <div class="project-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <a  id="project2"class="project-card reveal" href="https://www.behance.net/gallery/242103101/COLOR-GRADE">
+                        <div class="project-image">
+                            <img src="image/IMG_20251210_170146 (2).jpg"
+                                alt="Project 2" loading="lazy">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <span class="project-number">02</span>
+                        <div class="project-content">
+                            <h3 class="project-title">COLOR GRADING</h3>
+                            <p class="project-desc">Using color to shape mood, emotion, and story.</p>
+                        </div>
+                        <div class="project-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Project 3 -->
+                    <a  id="project3"class="project-card reveal" href="https://www.behance.net/gallery/242165723/AI-PROMPTS">
+                        <div class="project-image">
+                            <img src="image/photo_2026-01-14_16-31-03.jpg"
+                                alt="Project 3" loading="lazy">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <span class="project-number">03</span>
+                        <div class="project-content">
+                            <h3 class="project-title">AI ART</h3>
+                            <p class="project-desc">Creating concept-driven AI art with precision and intent.</p>
+                        </div>
+                        <div class="project-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Project 4 -->
+                    <a id="project4" class="project-card reveal" href="https://www.behance.net/gallery/242193221/WEB-DESIGNES">
+                        <div class="project-image">
+                            <img src="image/designarena_image_hmzi884q.png"
+                                alt="Project 4" loading="lazy">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <span class="project-number">04</span>
+                        <div class="project-content">
+                            <h3 class="project-title">WEB DESIGN</h3>
+                            <p class="project-desc">Designing clean, responsive websites focused on clarity and usability.</p>
+                        </div>
+                        <div class="project-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Project 5 -->
+                    <a  id="project5"class="project-card reveal" href="https://www.behance.net/gallery/242194399/APP-DESIGN">
+                        <div class="project-image">
+                            <img src="image/designarena_image_43c442qm.png"
+                                alt="Project 5" loading="lazy">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <span class="project-number">05</span>
+                        <div class="project-content">
+                            <h3 class="project-title">APP DESIGN</h3>
+                            <p class="project-desc">Creating user-friendly app designs with clean, modern interfaces.</p>
+                        </div>
+                        <div class="project-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Project 6 -->
+                    <a id="project6" class="project-card reveal" href="https://www.behance.net/gallery/242193953/DASHBOARD-DESIGNES">
+                        <div class="project-image">
+                            <img src="image/designarena_image_il6uerty.png"
+                                alt="Project 6" loading="lazy">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <span class="project-number">06</span>
+                        <div class="project-content">
+                            <h3 class="project-title">DASHBOARD DESIGN</h3>
+                            <p class="project-desc">Turning complex data into simple, actionable dashboards.</p>
+                        </div>
+                        <div class="project-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-tag">What I Do</div>
+            <h2 class="section-title">Services</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <!-- ONE SINGLE PARENT GRID CONTAINER -->
+        <div class="services-grid">
+            
+            <!-- Card 1 -->
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-palette"></i></div>
+                <h3 class="service-title">Graphic Designing</h3>
+                <p class="service-desc">Creative visuals, logos, banners, and marketing designs that make your brand stand out.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-eye"></i></div> <!-- Changed icon for variety -->
+                <h3 class="service-title">Color Grading</h3>
+                <p class="service-desc">Transform footage or images into cinematic, professional visuals.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3 class="service-title">Web Development</h3>
+                <p class="service-desc">Fast, secure, and fully functional websites built to scale.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3 class="service-title">App Development</h3>
+                <p class="service-desc">High-performance apps with smooth functionality and great UX.</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-icon"><i class="fas fa-pencil-ruler"></i></div>
+                <h3 class="service-title">UI/UX Design</h3>
+                <p class="service-desc">Sleek, intuitive interfaces with seamless user experiences.</p>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon"><i class="fas fa-robot"></i></div>
+                <h3 class="service-title">Prompt Engineering</h3>
+                <p class="service-desc">Crafting AI prompts for accurate and creative outputs.</p>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3 class="service-title">Dashboard Design</h3>
+                <p class="service-desc">Interactive, visually clear, and data-driven dashboards.</p>
+            </div>
+
+            <!-- Card 8 (Added to make the layout even) -->
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-icon"><i class="fas fa-pen"></i></div>
+                <h3 class="service-title">writing</h3>
+                <p class="service-desc">Engaging, clear, and tailored content for web, apps, or campaigns.</p>
+            </div>
+
+        </div> <!-- End of services-grid -->
+    </div>
+</section>
+ <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+
+                    <div class="about-text reveal reveal-delay-1">
+                        <div class="section-tag">About Me</div>
+                        <h3>Digital Creative Devloper</h3>
+                        <p>“Hi, I’m Yash Singh, a designer and developer based in India. I specialize in graphic design, UI/UX, web & app design, dashboard design, and development, blending creativity with technology. I also harness AI and prompt engineering to deliver smarter, more innovative solutions. My goal is to create visually compelling, functional, and meaningful digital experiences for businesses and individuals alike.”</p>
+                       
+
+                        <div class="about-list">
+                            <div class="about-list-item">
+                                <i class="fas fa-check"></i>
+                                <span>GRAPHIC DESIGNING</span>
+                            </div>
+                            <div class="about-list-item">
+                                <i class="fas fa-check"></i>
+                                <span>UI/UX DESIGNING</span>
+                            </div>
+                            <div class="about-list-item">
+                                <i class="fas fa-check"></i>
+                                <span>CONTENT WRITING</span>
+                            </div>
+                             <div class="about-list-item">
+                                <i class="fas fa-check"></i>
+                                <span>COLOR GRADING</span>
+                            </div>
+                            <div class="about-list-item">
+                                <i class="fas fa-check"></i>
+                                <span>PROMPT ENGINEERING</span>
+                            </div>
+                            <div class="about-list-item">
+                                <i class="fas fa-check"></i>
+                                <span>DEVLOPMENT</span>
+                            </div>
+                        </div>
+
+                        <a href="https://www.linkedin.com/in/yash-singh-2ab7b5374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary" style="margin-top: 30px;">
+                            <span>VISIT LINKEDIN</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="section-tag">philosophy</div>
+                    <h2 class="section-title">What i Belive</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <p class="testimonial-quote">"Design is not just what it looks like, it’s how it works."</p>
+                        <div class="testimonial-author">
+                           
+                            <div class="testimonial-info">
+                                <h4>stev jobs</h4>
+                                <span>CEO, Apple</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal reveal-delay-1">
+                        <p class="testimonial-quote">"Code is like humor. When you have to explain it, it’s bad."</p>
+                        <div class="testimonial-author">
+                           
+                            <div class="testimonial-info">
+                                <h4>Cory House</h4>
+                                <span>Programmer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="testimonial-card reveal">
+                        <p class="testimonial-quote">"Using AI isn’t replacing creativity—it’s amplifying it."</p>
+                        <div class="testimonial-author">
+                           
+                            <div class="testimonial-info">
+                                <h4>YASH SINGH</h4>
+                                <span>Creative Devloper</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+       
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3>YASH<span>SINGH</span></h3>
+                        <p>                    Crafting immersive digital experiences through bold design and strategic coding. BASED IN INDIA.
+
+                        </p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/yashsingh.digital?igsh=MWkxd2ZmaHhyZGN0aw=="><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/yashsinghonline"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/yash-singh-2ab7b5374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.behance.net/akira8"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+                            <li><a href="#projects" onclick="scrollToSection('projects')">Work</a></li>
+                            <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
+                            <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Projects</h4>
+                        <ul>
+                            <li><a href="#project1" onclick="navigateTo('project1')">GRAPHIC-DESIGN</a></li>
+                            <li><a href="#project2" onclick="navigateTo('project2')">COLOR-GRADE</a></li>
+                            <li><a href="#project5" onclick="navigateTo('project5')">APP DESIGN </a></li>
+                            <li><a href="#project4" onclick="navigateTo('project4')">WEB DESIGN</a></li>
+                                                        <li><a href="#project3" onclick="navigateTo('project3')">AI ART</a></li>
+                            <li><a href="#project6" onclick="navigateTo('project6')">DASHBOARD DESIGN</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Contact</h4>
+                        <ul>
+                             <li><a href="mailto:yashsinghactive@gmail.com?subject=Project Inquiry">
+    Email Me
+</a>
+</li>
+                            <li><a href="https://wa.me/qr/4W7WD5COO5GUG1" onclick="navigateTo('project2')">Whatsapp</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <span>© 2024 YASH SINGH DIGITAL CREATIVE DEVLOPER PORTFOLIO. All Rights Reserved.</span>
+                    <span>Available All Time</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+       
+    <script src="script.js"></script>
+</body>
+
+</html>
