@@ -306,14 +306,4 @@
         }
     });
 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        const supabaseUrl = 'https://obvmfkxmtwggxuyqqqhb.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9idm1ma3htdHdnZ3h1eXFxcWhiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc2MjcxMzksImV4cCI6MjA4MzIwMzEzOX0.FkEyXe8Z9tVBNLk_Qdj8vU0g7glxqCwwLSDK34Sg-YU';
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
-
-const { data, error } = supabase
-    .storage
-    .from('images') // bucket name
-    .getPublicUrl('photo_2025-12-27_23-40-57.jpg'); // file path
-
-document.getElementById('myImage').src = data.publicUrl;
+       
