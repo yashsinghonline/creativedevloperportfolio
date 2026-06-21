@@ -173,30 +173,39 @@
         }
 
         // ==================== FORM HANDLING ====================
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const btn = this.querySelector('button[type="submit"]');
-                const originalHTML = btn.innerHTML;
-                
-                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                btn.disabled = true;
-                
-                setTimeout(() => {
-                    btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-                    btn.style.background = '#22c55e';
-                    
-                    setTimeout(() => {
-                        btn.innerHTML = originalHTML;
-                        btn.style.background = '';
-                        btn.disabled = false;
-                        this.reset();
-                    }, 2000);
-                }, 1500);
-            });
-        }
+       document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Stops the page from refreshing
+
+        // 1. YOUR PHONE NUMBER 
+        // Replace '1234567890' with your number (e.g., '919876543210' for India)
+        const phoneNumber = "1234567890"; 
+
+        // 2. Get values from the form
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        // 3. Create the formatted message
+        // \n creates a new line in WhatsApp
+        const whatsappMessage = 
+            `Hello! I reached out from your website:\n\n` + 
+            `*Name:* ${name}\n` + 
+            `*Email:* ${email}\n` + 
+            `*Subject:* ${subject}\n` + 
+            `*Message:* ${message}`;
+
+        // 4. Encode the message for a URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+
+        // 5. Open WhatsApp in a new tab
+        const whatsappUrl = `https://wa.me/${+917976731198}?text=${encodedMessage}`;
+        window.open(whatsappUrl, '_blank');
+    });
+});
 
         // ==================== SMOOTH SCROLL ====================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
